@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- add icon link -->
+    <link rel="icon" href="https://static.thenounproject.com/png/49638-200.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Poppins:wght@300&family=Josefin+Sans&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="css/register.css">
+    <title>Register</title>
+</head>
+
+<body>
+    <div class="notify">
+        <h2>Already Registered ! 🤷‍♂️</h2>
+    </div>
+    <div class="container">
+        <div class="logo">
+            <img src="/images/clg-logo.jpeg" alt="logo">
+        </div>
+        <div class="title">
+            <h2>IOT & ROBOTICS</h2>
+            <p>Workshop 2021</p>
+        </div>
+
+        <!-- Form -->
+        <form action="/registerDetails" method="POST">
+            <div class="form">
+                <h2>Register <i class="fa fa-user-plus" aria-hidden="true"></i></h2>
+
+                <div class="name">
+                    <input type="text" name="name" id="name" placeholder="Name" autocomplete="off">
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                </div>
+
+                <div class="topic">
+                    <input type="email" name="email" id="email" placeholder="Email ID" autocomplete="off">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                </div>
+                <div class="number">
+                    <input type="text" name="contact" id="contact" placeholder="Contact No" autocomplete="off">
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                </div>
+                <div class="number">
+                    <input type="text" name="clgname" id="clgname" placeholder="College Name" autocomplete="off">
+                    <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                </div>
+                <div class="number">
+                    <select name="branch" id="branch">
+                        <option hidden>Branch</option>
+                        <option>ENTC</option>
+                        <option>IT</option>
+                        <option>COMP</option>
+                        <option>MECH</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+
+                <div class="btn">
+                    <button type="submit" id="loader">Proceed ▶
+                        <div class="loading-1 loading"></div>
+                    </button>
+                    <!-- <i class="fa fa-paper-plane" aria-hidden="true"></i> -->
+                </div>
+
+        </form>
+    </div>
+    </div>
+</body>
+<script src="https://js.stripe.com/v3/"></script>
+<script>
+    const error = '<%=error%>'
+    console.log("Error : ", error);
+</script>
+
+<script src="/js/register.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.1.0/uuidv4.min.js"></script>
+
+</html>
